@@ -2,15 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Javier Rodríguez · Barbate 2027</title>
-<meta name="description" content="Javier Rodríguez, candidato a la Alcaldía de Barbate en 2027. Propuestas, trabajo hecho y participación.">
+<meta name="description" content="Información pública, propuestas, actividad y fuentes de Javier Rodríguez para Barbate 2027.">
 <meta name="theme-color" content="#C8102E">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Javier Rodríguez · Barbate 2027">
-<meta property="og:description" content="Propuestas por barrios, trabajo hecho y un canal abierto para tus ideas.">
-<meta property="og:image" content="assets/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -18,550 +13,101 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --rojo:#C8102E;--rojo-2:#A50D26;--mar:#0F2C4A;--bg:#F4F6F9;--card:#FFFFFF;--arena:#EFE8DA;
-  --text:#18212E;--soft:#5A6576;--line:#DDE2EA;--chip:#E9EDF3;--ok:#1C7C54;--focus:#1F6FB2;
-  --r-lg:20px;--r-sm:10px;
-  --font:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  color-scheme:light;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0C1522;--card:#132033;--arena:#1C2636;--text:#EEF2F7;--soft:#A7B2C3;--line:#243349;--chip:#1D2B40;--mar:#081A2D;--ok:#4CC08D;--focus:#7DB5EA;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0C1522;--card:#132033;--arena:#1C2636;--text:#EEF2F7;--soft:#A7B2C3;--line:#243349;--chip:#1D2B40;--mar:#081A2D;--ok:#4CC08D;--focus:#7DB5EA;color-scheme:dark}
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-button,input,select,textarea{font:inherit;color:inherit}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-.display{font-stretch:72%;font-weight:850;letter-spacing:-.01em;line-height:.95}
-
-/* Draft bar */
-.draft{background:var(--mar);color:#DCE6F2;font-size:14px}
-.draft .wrap{display:flex;gap:12px;align-items:center;justify-content:space-between;padding-top:8px;padding-bottom:8px}
-.draft button{background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:3px 10px;cursor:pointer;font-size:13px;white-space:nowrap}
-
-/* Header */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:18px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800}
-.mark{width:36px;height:36px;border-radius:9px;background:var(--rojo);color:#fff;display:grid;place-items:center;font-stretch:75%;font-weight:900;font-size:17px}
-.brand small{display:block;font-weight:500;color:var(--soft);font-size:12.5px;line-height:1}
-.nav{margin-left:auto;display:flex;gap:2px}
-.nav a{text-decoration:none;padding:8px 12px;border-radius:9px;color:var(--soft);font-weight:600;font-size:15px}
-.nav a:hover{color:var(--text);background:var(--chip)}
-.nav a[aria-current="page"]{color:var(--rojo);background:color-mix(in srgb,var(--rojo) 10%,transparent)}
-.iconbtn{background:none;border:1px solid var(--line);border-radius:9px;width:38px;height:38px;cursor:pointer;display:grid;place-items:center}
-
-/* Hero */
-.hero{background:var(--rojo);color:#fff;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);min-height:560px}
-.hero-copy{padding:64px 20px 56px max(20px,calc((100vw - 1180px)/2 + 20px));display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.hero-kicker{font-size:17px;font-weight:600;opacity:.92;margin:0 0 18px}
-.hero h1{font-size:clamp(52px,7.4vw,108px);margin:0 0 22px;max-width:9ch;text-wrap:balance}
-.hero p.lead{font-size:19px;max-width:34ch;margin:0 0 28px;color:#FFE9EC}
-.hero-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:12px;padding:13px 18px;font-weight:700;text-decoration:none;cursor:pointer;border:0;font-size:16px}
-.btn-white{background:#fff;color:var(--rojo)}
-.btn-line{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55)}
-.btn-red{background:var(--rojo);color:#fff}
-.btn-quiet{background:var(--chip);color:var(--text)}
-.slogan-try{margin-top:26px;font-size:14px;display:flex;gap:10px;align-items:center;color:#FFD7DD}
-.slogan-try button{background:rgba(0,0,0,.18);border:0;color:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13.5px;font-weight:600}
-.hero-photo{position:relative;min-height:100%}
-.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:20% 30%}
-.hero-photo::before{content:"";position:absolute;inset:0 auto 0 0;width:30%;background:linear-gradient(90deg,var(--rojo),transparent);z-index:1}
-#sloganText{transition:opacity .25s}
-
-/* Sections */
-main{padding-bottom:40px}
-section.block{padding:56px 0 8px}
-.h2{font-size:clamp(34px,4.4vw,52px);margin:0 0 10px}
-.sub{color:var(--soft);margin:0 0 28px;max-width:62ch}
-.pageHead{padding:48px 0 12px}
-.pageHead .h2{font-size:clamp(40px,6vw,72px)}
-
-.prio{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid var(--rojo)}
-.prio a{display:block;text-decoration:none;padding:22px 24px 26px 0;border-right:1px solid var(--line);margin-right:24px}
-.prio a:last-child{border-right:0;margin-right:0}
-.prio h3{font-size:30px;margin:0 0 8px;font-stretch:78%;font-weight:800;line-height:1.02}
-.prio p{margin:0;color:var(--soft)}
-.prio a:hover h3{color:var(--rojo)}
-
-.quote{background:var(--arena);margin-top:56px}
-.quote .wrap{padding-top:44px;padding-bottom:44px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-.quote img{width:92px;height:92px;border-radius:50%;object-fit:cover;object-position:44% 16%}
-.quote blockquote{margin:0;font-size:clamp(26px,3.2vw,40px);font-stretch:80%;font-weight:750;line-height:1.1}
-.quote cite{display:block;font-style:normal;font-size:15px;color:var(--soft);margin-top:10px;font-weight:500;font-stretch:100%}
-
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:0 0 8px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 22px}
-.stat b{display:block;font-size:44px;font-stretch:70%;font-weight:900;color:var(--rojo);line-height:1}
-.stat span{color:var(--soft);font-size:15px}
-
-.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(270px,1fr);gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
-.rail article{scroll-snap-align:start}
-.item{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px}
-.item time{font-size:14px;color:var(--rojo);font-weight:700}
-.item h3{margin:6px 0 6px;font-size:19px;line-height:1.25}
-.item p{margin:0;color:var(--soft);font-size:15.5px}
-.more{display:inline-block;margin-top:14px;font-weight:700;color:var(--rojo);text-decoration:none}
-.more:hover{text-decoration:underline}
-
-.tag{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--chip);color:var(--soft)}
-.tag.pleno{background:color-mix(in srgb,var(--ok) 14%,transparent);color:var(--ok)}
-.tag.ej{background:color-mix(in srgb,#E0A100 18%,transparent);color:#8A6300}
-:root[data-theme="dark"] .tag.ej{color:#F2C14E}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.ej{color:#F2C14E}}
-
-.cta{background:var(--mar);color:#fff;border-radius:28px;padding:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;margin-top:56px}
-.cta h2{margin:0 0 8px;font-size:clamp(32px,4vw,46px)}
-.cta p{margin:0;color:#C9D6E6}
-.cta .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-
-/* Propuestas */
-.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 22px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--soft)}
-.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
-.search{flex:1 1 240px;min-width:0;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
-.eje{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);margin-bottom:12px;overflow:hidden}
-.eje summary{list-style:none;cursor:pointer;padding:22px 24px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
-.eje summary::-webkit-details-marker{display:none}
-.eje h3{margin:0;font-size:clamp(24px,2.6vw,30px);font-stretch:78%;font-weight:800;line-height:1.05}
-.eje summary p{margin:6px 0 0;color:var(--soft);font-size:16px}
-.eje .count{font-size:14px;color:var(--soft);white-space:nowrap}
-.eje .plus{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--chip);margin-left:10px;transition:transform .2s;font-weight:700}
-.eje[open] .plus{transform:rotate(45deg);background:var(--rojo);color:#fff}
-.eje ul{list-style:none;margin:0;padding:0 24px 18px}
-.eje li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:12px}
-.eje li strong{display:block;font-size:17px}
-.eje li span.why{display:block;color:var(--soft);font-size:15px}
-.eje li .z{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
-.empty{background:var(--card);border:1px dashed var(--line);border-radius:var(--r-lg);padding:28px;text-align:center;color:var(--soft)}
-
-/* Barrios */
-.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
-.zone{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;cursor:pointer}
-.zone b{display:block;font-size:22px;font-stretch:78%;font-weight:800}
-.zone span{color:var(--soft);font-size:14.5px}
-.zone[aria-pressed="true"]{border-color:var(--rojo);box-shadow:inset 0 0 0 1px var(--rojo)}
-.zonePanel{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.zonePanel h3{margin:0 0 12px;font-size:22px}
-.list{display:grid;gap:10px}
-
-/* Timeline */
-.year{font-size:44px;font-stretch:70%;font-weight:900;color:var(--rojo);margin:30px 0 8px}
-.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:22px}
-.tl article{position:relative;padding:0 0 22px}
-.tl article::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--card);border:3px solid var(--rojo)}
-.tl h3{margin:2px 0 4px;font-size:19px;line-height:1.25}
-.tl p{margin:0 0 6px;color:var(--soft);max-width:70ch}
-.tl a.src{font-size:14px;color:var(--soft)}
-
-/* Javier */
-.profile{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
-.profile .ph{border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--rojo)}
-.profile .ph img{width:100%;height:100%;object-fit:cover;object-position:42% 30%}
-.bio p{font-size:19px;max-width:60ch}
-.team{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.person{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px}
-.av{width:48px;height:48px;border-radius:50%;background:var(--chip);display:grid;place-items:center;font-weight:800;color:var(--rojo);margin-bottom:10px}
-.person b{display:block}
-.person span{color:var(--soft);font-size:14.5px}
-
-/* Agenda */
-.ev{display:grid;grid-template-columns:86px 1fr auto;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 20px;margin-bottom:10px}
-.date{text-align:center;border-right:1px solid var(--line);padding-right:14px}
-.date b{display:block;font-size:38px;font-stretch:70%;font-weight:900;line-height:1;color:var(--rojo)}
-.date span{font-size:14px;color:var(--soft);font-weight:600}
-.ev h3{margin:0 0 3px;font-size:19px}
-.ev p{margin:0;color:var(--soft);font-size:15px}
-
-/* Participa */
-.pgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:start}
-.form{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px}
-.form h2{margin:0 0 6px;font-size:28px}
-label{display:block;font-weight:650;font-size:15px;margin:16px 0 6px}
-.form input[type=text],.form input[type=email],.form select,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
-.form textarea{min-height:130px;resize:vertical}
-.check{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14.5px;color:var(--soft)}
-.check input{margin-top:4px;width:18px;height:18px;accent-color:var(--rojo)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ok{background:color-mix(in srgb,var(--ok) 12%,transparent);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent);border-radius:12px;padding:14px 16px;margin-top:16px}
-.side{display:grid;gap:12px}
-.side .item h3{font-size:20px}
-.fine{font-size:13.5px;color:var(--soft)}
-
-footer{background:var(--mar);color:#B9C7D8;margin-top:64px;padding:36px 0 110px;font-size:14.5px}
-footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
-footer b{color:#fff}
-footer a{color:#DCE6F2}
-
-.tabbar{display:none}
-.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);opacity:0;background:var(--text);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:600;transition:.25s;z-index:90;pointer-events:none}
-.toast.show{opacity:1;transform:translateX(-50%)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-
-@media (max-width:980px){
-  .nav{display:none}
-  .hero-grid{grid-template-columns:1fr;min-height:0}
-  .hero-photo{order:-1;height:62vw;max-height:440px}
-  .hero-photo img{object-position:40% 25%}
-  .hero-photo::before{inset:auto 0 0 0;width:100%;height:40%;background:linear-gradient(0deg,var(--rojo),transparent)}
-  .hero-copy{padding:8px 20px 40px}
-  .hero h1{max-width:12ch}
-  .prio{grid-template-columns:1fr}
-  .prio a{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding-right:0}
-  .cta{grid-template-columns:1fr;padding:28px}
-  .cta .btns{justify-content:flex-start}
-  .zones{grid-template-columns:repeat(2,1fr)}
-  .zonePanel,.profile,.pgrid{grid-template-columns:1fr}
-  .team{grid-template-columns:repeat(2,1fr)}
-  footer .wrap{grid-template-columns:1fr}
-  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
-  .tabbar a{text-decoration:none;display:grid;justify-items:center;gap:2px;font-size:11.5px;font-weight:600;color:var(--soft);padding:4px 0}
-  .tabbar svg{width:22px;height:22px}
-  .tabbar a[aria-current="page"]{color:var(--rojo)}
-}
-@media (max-width:600px){
-  body{font-size:16.5px}
-  .stats{grid-template-columns:1fr 1fr}
-  .stats .stat:last-child{grid-column:1/-1}
-  .quote .wrap{grid-template-columns:1fr}
-  .ev{grid-template-columns:70px 1fr}
-  .ev .shareBtn{grid-column:1/-1}
-  .row2{grid-template-columns:1fr}
-  .zones{display:flex;overflow-x:auto;gap:10px;scroll-snap-type:x mandatory;margin:0 -20px 22px;padding:0 20px 6px}
-  .zone{flex:0 0 68%;scroll-snap-align:start;padding:14px 16px}
-  .zone b{font-size:20px}
-  .eje summary{padding:18px}
-  .eje ul{padding:0 18px 14px}
-  .eje li{grid-template-columns:1fr}
-  .draft .wrap{font-size:13px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+:root{--red:#c8102e;--navy:#102a43;--bg:#f5f7fa;--card:#fff;--text:#17202b;--muted:#5e6a79;--line:#dce2e9;--soft:#eef2f6;--ok:#18794e;--warn:#956200;font-family:Archivo,system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--bg);color:var(--text);font-size:16px;line-height:1.55}a{color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:30;background:#fffffff4;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topin{height:64px;display:flex;align-items:center;gap:14px}.brand{text-decoration:none;font-weight:850;display:flex;align-items:center;gap:10px}.mark{background:var(--red);color:#fff;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-weight:900}.brand small{display:block;color:var(--muted);font-size:11px}.nav{margin-left:auto;display:flex;gap:3px}.nav a{padding:8px 10px;border-radius:9px;text-decoration:none;color:var(--muted);font-weight:650;font-size:14px}.nav a.active,.nav a:hover{background:var(--soft);color:var(--red)}.theme{border:1px solid var(--line);background:#fff;border-radius:9px;width:38px;height:38px}
+.notice{background:var(--navy);color:#e9f0f7;font-size:13px}.notice .wrap{padding:8px 20px;display:flex;justify-content:space-between;gap:10px}.notice button{background:none;border:1px solid #ffffff55;color:#fff;border-radius:8px;padding:3px 9px}
+.hero{background:var(--red);color:#fff}.heroGrid{display:grid;grid-template-columns:1fr 1fr;min-height:500px}.heroCopy{padding:70px 20px 60px max(20px,calc((100vw - 1160px)/2 + 20px));display:flex;flex-direction:column;justify-content:center}.eyebrow{font-weight:700;opacity:.9}.hero h1{font-size:clamp(50px,7vw,92px);line-height:.92;letter-spacing:-.04em;margin:14px 0 22px;max-width:8ch}.hero p{font-size:19px;max-width:52ch;color:#ffecef}.heroImg{min-height:500px;position:relative}.heroImg img{width:100%;height:100%;object-fit:cover;object-position:40% 25%}.heroImg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--red),transparent 38%)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btn{border:0;border-radius:11px;padding:12px 17px;font-weight:750;text-decoration:none;cursor:pointer;display:inline-block}.white{background:#fff;color:var(--red)}.outline{background:transparent;border:1px solid #ffffff88;color:#fff}
+.section{padding:55px 0 5px}.kicker{color:var(--red);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.h2{font-size:clamp(32px,5vw,54px);line-height:1;margin:5px 0 10px;letter-spacing:-.035em}.sub{color:var(--muted);max-width:70ch;margin:0 0 25px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}.card h3{margin:0 0 7px;font-size:21px;line-height:1.15}.card p{margin:0;color:var(--muted)}.tag{display:inline-block;padding:4px 9px;border-radius:99px;background:var(--soft);color:var(--muted);font-size:12px;font-weight:750}.verified{background:#e7f5ee;color:var(--ok)}.decl{background:#fff2dc;color:var(--warn)}
+.axes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.axis{padding:18px;background:#fff;border:1px solid var(--line);border-radius:15px}.axis b{font-size:19px}.axis p{margin:5px 0 10px;color:var(--muted);font-size:14px}
+.timeline{border-left:2px solid var(--line);margin:25px 0 0 7px;padding-left:24px}.event{position:relative;padding:0 0 25px}.event:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--red);left:-31px;top:5px}.event time{font-size:13px;color:var(--red);font-weight:800}.event h3{margin:3px 0 4px}.event p{margin:0;color:var(--muted)}.source{font-size:13px;color:var(--muted);margin-top:8px}.source a{color:var(--red);font-weight:700}
+.barrios{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.barrio{border:1px solid var(--line);background:#fff;border-radius:14px;padding:16px;text-align:left;cursor:pointer}.barrio.active{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}.barrio b{display:block;font-size:18px}.barrio span{color:var(--muted);font-size:13px}
+.profile{display:grid;grid-template-columns:.75fr 1.25fr;gap:32px}.portrait{border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:var(--red)}.portrait img{width:100%;height:100%;object-fit:cover}.bio p{font-size:18px}.facts{display:grid;gap:9px;margin-top:20px}.fact{padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#fff}.fact b{display:block}
+.agenda{display:grid;gap:10px}.agendaItem{display:grid;grid-template-columns:90px 1fr;gap:16px;align-items:center}.date{text-align:center;border-right:1px solid var(--line);padding-right:14px}.date b{font-size:35px;color:var(--red);line-height:1}.date span{font-size:13px;color:var(--muted);font-weight:700}
+.search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:11px;background:#fff;margin-bottom:18px}.sources{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.sourceBox a{display:block;color:var(--red);font-weight:700;text-decoration:none;margin-top:8px}
+footer{background:var(--navy);color:#cbd7e4;padding:35px 0 90px;margin-top:55px}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:25px}footer b{color:#fff}.legal{font-size:12px;color:#9fb0c2}
+.bottom{display:none}
+@media(max-width:850px){.nav{display:none}.heroGrid{grid-template-columns:1fr}.heroImg{order:-1;height:58vw;min-height:260px}.heroCopy{padding:35px 20px 45px}.heroImg:after{background:linear-gradient(0deg,var(--red),transparent 45%)}.grid3,.axes,.sources,.footgrid,.profile{grid-template-columns:1fr}.barrios{grid-template-columns:repeat(2,1fr)}.bottom{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;bottom:0;left:0;right:0;background:#fffffff7;border-top:1px solid var(--line);z-index:40;padding:6px 4px}.bottom a{text-align:center;text-decoration:none;font-size:11px;color:var(--muted);font-weight:700}.bottom a.active{color:var(--red)}} 
+@media(max-width:520px){.barrios{display:flex;overflow:auto}.barrio{min-width:170px}.agendaItem{grid-template-columns:68px 1fr}.notice .wrap{font-size:12px}}
 </style>
 </head>
 <body>
-<div class="draft" id="draft" role="note"><div class="wrap"><span>Borrador de comunicación. Las propuestas son orientativas hasta tener el programa definitivo.</span><button type="button" id="draftClose">Entendido</button></div></div>
-
-<header class="top"><div class="wrap">
-  <a class="brand" href="#inicio"><span class="mark" aria-hidden="true">JR</span><span>Javier Rodríguez<small>Barbate 2027</small></span></a>
-  <nav class="nav" aria-label="Principal">
-    <a href="#inicio">Inicio</a><a href="#propuestas">Propuestas</a><a href="#barrios">Barrios</a><a href="#hecho">Hecho</a><a href="#javier">Javier</a><a href="#agenda">Agenda</a><a href="#participa">Participa</a>
-  </nav>
-  <button class="iconbtn" id="themeBtn" type="button" aria-label="Cambiar tema claro u oscuro"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+<div class="notice"><div class="wrap"><span><b>Información pública · versión de trabajo</b> — hechos, declaraciones y propuestas se mantienen diferenciados.</span><button id="closeNotice">Cerrar</button></div></div>
+<header class="top"><div class="wrap topin">
+<a class="brand" href="#inicio"><span class="mark">JR</span><span>Javier Rodríguez<small>Barbate 2027</small></span></a>
+<nav class="nav">
+<a href="#inicio">Inicio</a><a href="#javier">Javier</a><a href="#programa">Programa</a><a href="#barrios">Barrios</a><a href="#hechos">Hechos</a><a href="#agenda">Agenda</a><a href="#fuentes">Fuentes</a>
+</nav><button class="theme" id="theme" aria-label="Cambiar tema">◐</button>
 </div></header>
-
-<main id="app" tabindex="-1"></main>
-
-<footer><div class="wrap">
-  <div><b>Javier Rodríguez · Barbate 2027</b><p>Candidatura del PSOE a la Alcaldía de Barbate. Elecciones municipales de mayo de 2027.</p></div>
-  <div><b>Contacto</b><p>Casa del Pueblo · PSOE de Barbate<br><a href="https://agrupacionespsoe.es/barbate/" rel="noopener" target="_blank">agrupacionespsoe.es/barbate</a></p></div>
-  <div><b>Legal</b><p>Responsable de la web y de los datos: pendiente de confirmar por la candidatura. Aviso legal y política de privacidad en preparación.</p></div>
+<main id="app"></main>
+<footer><div class="wrap footgrid">
+<div><b>Javier Rodríguez · Barbate 2027</b><p>Información pública sobre candidatura, propuestas, actividad y documentación.</p></div>
+<div><b>Fuentes</b><p>Instituciones, documentos, publicaciones y medios identificados.</p></div>
+<div><b>Transparencia</b><p class="legal">Responsable de la web y política de privacidad: pendiente de confirmación por la candidatura. Esta versión no habilita recogida de datos personales.</p></div>
 </div></footer>
-
-<nav class="tabbar" aria-label="Accesos rápidos">
-  <a href="#inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a>
-  <a href="#propuestas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Propuestas</a>
-  <a href="#barrios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Barrios</a>
-  <a href="#javier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Javier</a>
-  <a href="#participa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Participa</a>
-</nav>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+<nav class="bottom"><a href="#inicio">Inicio</a><a href="#javier">Javier</a><a href="#programa">Programa</a><a href="#hechos">Hechos</a><a href="#fuentes">Fuentes</a></nav>
 <script>
-const IMG="assets/javier.webp";
-const SLOGANS=["Tender puentes por Barbate.","Barbate, por encima de todo.","Un Ayuntamiento que escuche."];
-
-const ZONES=[
- {id:"barbate",name:"Barbate",desc:"Núcleo urbano, puerto y playa del Carmen"},
- {id:"chinar",name:"El Chinar",desc:"Barriada: bloques, saneamiento y AVRA"},
- {id:"zahara",name:"Zahara de los Atunes",desc:"Entidad Local Autónoma y la A-2231"},
- {id:"canos",name:"Caños de Meca",desc:"Costa, La Breña y temporada turística"},
- {id:"zahora",name:"Zahora",desc:"Pedanía: caminos, servicios y consultorio"},
- {id:"sanambrosio",name:"San Ambrosio",desc:"Pedanía rural: caminos y conexión"}
-];
-const ALL=["barbate","chinar","zahara","canos","zahora","sanambrosio"];
-const PED=["zahora","sanambrosio","canos"];
-
-const EJES=[
- {id:"vivienda",t:"Vivienda para quedarse en Barbate",s:"Que los jóvenes y las familias no tengan que irse del pueblo para poder vivir.",p:[
-  {t:"Plan municipal de vivienda pública",w:"Aprovechar el Plan Estatal de Vivienda con suelo municipal para vivienda protegida en alquiler y compra.",st:"pleno",z:ALL},
-  {t:"Rehabilitación de la barriada del Chinar",w:"Informes técnicos de los bloques, arreglo del saneamiento y actuación coordinada con AVRA.",st:"pleno",z:["chinar"]},
-  {t:"Oficina municipal de vivienda",w:"Un punto único para informar de ayudas, registro de demandantes y alquiler asequible.",st:"nueva",z:ALL}]},
- {id:"servicios",t:"Calles limpias, servicios que funcionan",s:"Lo básico, bien hecho y todos los días. También en las pedanías.",p:[
-  {t:"Plan de choque de limpieza viaria",w:"Más personal y rutas fijas, con servicio propio para las pedanías.",st:"pleno",z:ALL},
-  {t:"Aceras y asfaltado con calendario público",w:"Un plan por barrios, con fechas visibles para que cada vecino sepa cuándo le toca.",st:"nueva",z:ALL},
-  {t:"Reabrir la piscina municipal",w:"Un compromiso anunciado hace años que sigue pendiente.",st:"nueva",z:["barbate"]},
-  {t:"Parques infantiles renovados",w:"Revisión y mantenimiento de todos los parques del municipio.",st:"pleno",z:ALL}]},
- {id:"salud",t:"Salud y mayores",s:"Cuidar a quienes han levantado Barbate.",p:[
-  {t:"Residencia pública de mayores",w:"Una demanda de los vecinos que impulsamos junto a la Plataforma por la Residencia.",st:"pleno",z:ALL},
-  {t:"Nuevo centro de salud con plazos y presupuesto",w:"Convenio con la Junta de Andalucía con fechas, inversión y compromisos por escrito.",st:"pleno",z:["barbate"]},
-  {t:"Consultorio médico en las pedanías",w:"Que la atención primaria no dependa de tener coche.",st:"nueva",z:PED}]},
- {id:"carreteras",t:"Llegar seguros",s:"Carreteras y caminos a la altura de un municipio de 23.000 habitantes.",p:[
-  {t:"Arreglo integral de la A-2231 Barbate–Zahara",w:"Firme, iluminación, seguridad vial y mantenimiento del carril bici. Moción aprobada por unanimidad.",st:"pleno",z:["barbate","zahara"]},
-  {t:"Rotonda en la A-2231",w:"Solicitar la cesión de terrenos de El Retín para ejecutarla, con partida presupuestaria.",st:"pleno",z:["zahara"]},
-  {t:"Mejora de la A-314",w:"Tramo entre la rotonda del polígono industrial y la Venta del Loro.",st:"pleno",z:["barbate"]},
-  {t:"Caminos rurales dignos",w:"Incluir caminos como La Oscuridad o El Cañillo en las ayudas autonómicas.",st:"pleno",z:PED}]},
- {id:"mar",t:"El mar, nuestro motor",s:"La pesca y el puerto son la identidad y la economía de Barbate.",p:[
-  {t:"Dragado de la bocana del río Barbate",w:"Una bocana cegada es un riesgo para la flota. Moción aprobada por unanimidad en Diputación.",st:"pleno",z:["barbate"]},
-  {t:"Exención de las tasas de la lonja",w:"Alivio para el sector ante la subida del combustible y de los costes.",st:"pleno",z:["barbate"]},
-  {t:"Un puerto público y con futuro",w:"Frenar la privatización integral y planificar el puerto con el sector pesquero.",st:"pleno",z:["barbate"]}]},
- {id:"empleo",t:"Trabajo todo el año",s:"Que el turismo y la actividad no se acaben en septiembre.",p:[
-  {t:"Más plazas de alojamiento",w:"Atraer hoteles y alojamiento de calidad para crear empleo estable, no solo de temporada.",st:"nueva",z:ALL},
-  {t:"Bolsa de empleo municipal transparente",w:"Criterios públicos, listas publicadas y formación ligada a lo que piden las empresas.",st:"nueva",z:ALL},
-  {t:"Impulso al polígono El Olivar",w:"Suelo y servicios para que las empresas locales puedan crecer aquí.",st:"nueva",z:["barbate"]}]},
- {id:"retin",t:"El Retín: compensaciones con destino",s:"Barbate merece compensación. Y cada euro, un proyecto concreto.",p:[
-  {t:"Compensaciones ligadas a proyectos",w:"Negociar con el Gobierno de España fondos finalistas: residencia, vivienda, carreteras y consultorios.",st:"nueva",z:ALL}]},
- {id:"entorno",t:"La Breña y nuestras playas",s:"Proteger lo que nos hace únicos.",p:[
-  {t:"Prevención de incendios en La Breña",w:"Desbroces, podas y más medios del Infoca antes del verano, no después.",st:"pleno",z:["canos","zahora","barbate"]},
-  {t:"Transparencia en el agua de baño",w:"Información pública y a tiempo sobre calidad del agua y la depuradora.",st:"pleno",z:["barbate"]},
-  {t:"Prevención frente a inundaciones",w:"Destinar los fondos estatales a caminos, pedanías y drenaje.",st:"pleno",z:ALL}]},
- {id:"educacion",t:"Educación y juventud",s:"Escuelas cuidadas y un futuro para quedarse.",p:[
-  {t:"Pacto local por la educación",w:"Un acuerdo con las AMPA y los centros para mantenimiento, seguridad y actividades.",st:"pleno",z:ALL},
-  {t:"Escuelas municipales abiertas",w:"Deporte y cultura accesibles para todas las familias.",st:"nueva",z:ALL}]},
- {id:"ayuntamiento",t:"Un Ayuntamiento que escuche",s:"Menos ruido, más diálogo y cuentas claras.",p:[
-  {t:"Presupuestos participativos",w:"Que los barrios y las pedanías decidan parte de las inversiones.",st:"nueva",z:ALL},
-  {t:"Menos cargos de confianza, más servicios",w:"Reducir el gasto político para invertir en limpieza, empleo y mantenimiento.",st:"pleno",z:ALL},
-  {t:"Relación leal con Zahara y las administraciones",w:"Colaborar con la ELA, la Mancomunidad, la Junta y el Estado para traer recursos.",st:"nueva",z:["zahara"]}]}
-];
-
-const HECHO=[
- {d:"2026-09-08",t:"Candidato a la Alcaldía para 2027",x:"El PSOE confirma que encabezaré de nuevo la candidatura en Barbate.",u:"https://www.andaluciainformacion.es/articulo/barbate/javier-rodriguez-volvera-liderar-psoe-barbate-intentar-recuperar-alcaldia/202609081834043471533.html",z:ALL},
- {d:"2026-09-04",t:"A-2231: moción aprobada por unanimidad",x:"Reclamamos a la Junta el arreglo integral de la carretera Barbate–Zahara. Ahora la llevamos a la Diputación.",u:"https://www.teleprensa.com/articulo/cadiz/psoe-exige-junta-arreglo-integral-carretera-entre-barbate-zahara-atunes/202609041232172500070.html",z:["barbate","zahara"]},
- {d:"2026-08-28",t:"Barriada del Chinar",x:"Tras reunirnos con los vecinos, pedimos informes técnicos, solución al saneamiento y la actuación de AVRA.",z:["chinar"]},
- {d:"2026-08-28",t:"Playa del Carmen y depuradora",x:"Pedimos explicaciones sobre el cierre temporal del baño y el funcionamiento de la depuradora.",z:["barbate"]},
- {d:"2026-08-11",t:"Fondos por las inundaciones",x:"Propusimos destinar los fondos estatales a servicios públicos, caminos, prevención y pedanías.",z:ALL},
- {d:"2026-07-10",t:"Prevención de incendios en La Breña",x:"Reclamamos desbroces, podas y más medios del Infoca tras el incendio junto al parque natural.",z:["canos","zahora","barbate"]},
- {d:"2026-06-26",t:"Vivienda protegida",x:"Moción para aprovechar el nuevo Plan Estatal de Vivienda en Barbate.",z:ALL},
- {d:"2026-06-03",t:"A-314 y presupuesto alternativo",x:"Mejora de la A-314 y propuestas para más limpieza, aceras, parques e inversión en pedanías.",u:"https://www.andaluciainformacion.es/articulo/barbate/psoe-carga-gobierno-local-son-propuestas-devolver-barbate-lugar-que-merece/202605300918463394438.html",z:["barbate"]},
- {d:"2026-05-06",t:"Sanidad pública y caminos rurales",x:"Convenio para el nuevo centro de salud y ayudas para caminos como La Oscuridad o El Cañillo.",u:"https://www.andaluciainformacion.es/articulo/barbate/psoe-exige-compromisos-reales-sanidad-denuncia-anos-promesas-incumplidas-barbate/202605051951453254591.html",z:PED.concat(["barbate"])},
- {d:"2026-03-25",t:"Apoyo al sector pesquero",x:"Pedimos la exención de las tasas de la lonja y el dragado de la bocana.",u:"https://www.andaluciainformacion.es/articulo/barbate/psoe-barbate-pedira-exencion-tasas-lonja-crisis-sector-pesquero/202603251221173233676.html",z:["barbate"]},
- {d:"2026-01-28",t:"Dragado del río: unanimidad en Diputación",x:"La Diputación respalda por unanimidad la moción socialista para exigir el dragado urgente.",u:"https://www.andaluciainformacion.es/articulo/barbate/diputacion-aprueba-unanimidad-mocion-psoe-exigir-junta-dragado-urgente-rio-barbate/202601281127483202670.html",z:["barbate"]},
- {d:"2026-01-09",t:"Residencia de mayores",x:"Presentamos la moción junto a la Plataforma por la Construcción de una Residencia de Mayores.",z:ALL},
- {d:"2025-06-04",t:"Secretario general del PSOE de Barbate",x:"Elegido con el apoyo del 100 % de la militancia participante.",z:ALL},
- {d:"2023-10-19",t:"Presidente de la Mancomunidad de La Janda",x:"Al frente del ente comarcal que presta servicios a los municipios de La Janda.",u:"https://www.andaluciainformacion.es/articulo/conil/javier-rodriguez-psoe-se-convierte-en-nuevo-presidente-de-la-mancomunidad-de-la-janda/202310192028092539803.html",z:ALL},
- {d:"2023-05-28",t:"Cinco concejales más en las municipales",x:"El proyecto socialista crece con fuerza y se convierte en la alternativa.",z:ALL}
-];
-
-const TRAY=[
- ["1990","Nace en Barbate."],
- ["2015","Concejal del Ayuntamiento de Barbate."],
- ["2019","Primer teniente de alcalde y portavoz municipal. Presidencia, Seguridad Ciudadana, Turismo y Deportes."],
- ["2021","Deja el equipo de gobierno y empieza un proyecto propio desde el PSOE."],
- ["2023","Candidato a la Alcaldía. Portavoz del Grupo Municipal Socialista y presidente de la Mancomunidad de La Janda."],
- ["2025","Secretario general del PSOE de Barbate."],
- ["2026","Candidato a la Alcaldía para 2027."]
-];
-const TEAM=[["JR","Javier Rodríguez","Candidato a la Alcaldía"],["MV","Mariloli Varo","Diputada provincial"],["JA","Jesús Alba","Concejal y vicesecretario general"],["MT","Montse Tamayo","Concejala. Educación"]];
-const AGENDA=[
- {d:"2026-10-09",h:"19:00",t:"Encuentro vecinal en el Chinar",l:"Barriada del Chinar"},
- {d:"2026-10-17",h:"11:00",t:"Recorrido por la A-2231 con vecinos de Zahara",l:"Zahara de los Atunes"},
- {d:"2026-10-24",h:"12:00",t:"Café con la Plataforma por la Residencia",l:"Casa del Pueblo"},
- {d:"2026-11-07",h:"18:30",t:"Asamblea abierta: vivienda para quedarse",l:"Barbate"}
-];
-
-/* Helpers */
-const $=s=>document.querySelector(s);
-const esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-const MES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
-const fDate=d=>{const [y,m,dd]=d.split("-");return `${+dd} ${MES[+m-1]} ${y}`};
-const zName=id=>(ZONES.find(z=>z.id===id)||{}).name||id;
-const zTags=z=>z.length===ALL.length?'<span class="tag">Todo el municipio</span>':z.map(id=>`<span class="tag">${esc(zName(id))}</span>`).join("");
-const stTag=st=>st==="pleno"?'<span class="tag pleno">Ya lo llevamos al Pleno</span>':'<span class="tag">Propuesta</span>';
-function toast(t){const el=$("#toast");el.textContent=t;el.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove("show"),2200)}
-const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
-async function share(title,hash){const url=location.href.split("#")[0]+(hash||"");try{if(navigator.share){await navigator.share({title,url});return}await navigator.clipboard.writeText(url);toast("Enlace copiado")}catch(e){}}
-
-/* Views */
-const V={};
-V.inicio=()=>{
- const last=HECHO.slice(0,6);
- return `
-<section class="hero"><div class="hero-grid">
- <div class="hero-copy">
-  <p class="hero-kicker">Javier Rodríguez, candidato a la Alcaldía de Barbate</p>
-  <h1 class="display" id="sloganText">${esc(SLOGANS[+store.get("slogan")||0])}</h1>
-  <p class="lead">Vivienda, servicios que funcionen y un Ayuntamiento que hable con todos. Para Barbate, Zahara y las pedanías.</p>
-  <div class="hero-actions"><a class="btn btn-white" href="#propuestas">Ver propuestas</a><a class="btn btn-line" href="#participa">Enviar una idea</a></div>
-  <div class="slogan-try"><button type="button" id="sloganBtn">Probar otro lema</button><span id="sloganIdx">Lema ${(+store.get("slogan")||0)+1} de ${SLOGANS.length}</span></div>
- </div>
- <div class="hero-photo"><img src="${IMG}" alt="Javier Rodríguez en la sede del PSOE de Barbate" width="1200" height="800" fetchpriority="high"></div>
-</div></section>
-
-<div class="wrap">
- <section class="block">
-  <h2 class="h2 display">Tres prioridades</h2>
-  <p class="sub">Lo que más nos piden los vecinos, y por dónde empezaría.</p>
-  <div class="prio">
-   <a href="#propuestas/vivienda"><h3>Vivienda para quedarse</h3><p>Vivienda pública y protegida para que los jóvenes no tengan que irse.</p></a>
-   <a href="#propuestas/servicios"><h3>Servicios que funcionen</h3><p>Limpieza, aceras y mantenimiento todos los días, también en las pedanías.</p></a>
-   <a href="#propuestas/ayuntamiento"><h3>Diálogo, no ruido</h3><p>Un Ayuntamiento leal con Zahara, la Junta y el Estado para traer recursos.</p></a>
-  </div>
- </section>
-</div>
-
-<div class="quote"><div class="wrap">
- <img src="${IMG}" alt="" width="92" height="92">
- <blockquote>“Concibo la política para unir puentes y no destruirlos.”<cite>Javier Rodríguez, junio de 2026</cite></blockquote>
-</div></div>
-
-<div class="wrap">
- <section class="block">
-  <h2 class="h2 display">Hecho en este mandato</h2>
-  <p class="sub">Desde la oposición, con propuestas. Muchas de ellas aprobadas por unanimidad.</p>
-  <div class="stats">
-   <div class="stat"><b>+100</b><span>mociones presentadas por el grupo socialista</span></div>
-   <div class="stat"><b>+5</b><span>concejales más en 2023</span></div>
-   <div class="stat"><b>3</b><span>años presidiendo la Mancomunidad de La Janda</span></div>
-  </div>
-  <div class="rail" style="margin-top:14px">${last.map(e=>`<article class="item"><time datetime="${e.d}">${fDate(e.d)}</time><h3>${esc(e.t)}</h3><p>${esc(e.x)}</p></article>`).join("")}</div>
-  <a class="more" href="#hecho">Todo el trabajo hecho</a>
- </section>
-
- <section class="block">
-  <h2 class="h2 display">Próximos encuentros</h2>
-  <p class="sub">Salimos a los barrios a escuchar. <span class="tag ej">Ejemplo de formato</span></p>
-  ${AGENDA.slice(0,2).map(evHTML).join("")}
-  <a class="more" href="#agenda">Ver agenda</a>
- </section>
-
- <div class="cta">
-  <div><h2 class="display">¿Qué le falta a tu calle?</h2><p>Cuéntanoslo. Cada propuesta llega al equipo y se tiene en cuenta para el programa.</p></div>
-  <div class="btns"><a class="btn btn-white" href="#participa">Enviar una idea</a><button class="btn btn-line" type="button" data-share="Barbate 2027">Compartir</button></div>
- </div>
-</div>`};
-
-V.propuestas=(arg)=>`
-<div class="wrap">
- <div class="pageHead"><h1 class="h2 display">Propuestas</h1>
- <p class="sub">Diez ejes para Barbate. Las marcadas en verde ya las hemos defendido en el Pleno o en la Diputación. <span class="tag ej">Orientativo hasta el programa definitivo</span></p></div>
- <div class="tools">
-  <input class="search" id="q" type="search" placeholder="Buscar: vivienda, playa, Zahara…" aria-label="Buscar propuestas">
-  <div class="chips" role="group" aria-label="Filtrar por zona">
-   <button class="chip" type="button" data-z="" aria-pressed="true">Todas</button>
-   ${ZONES.map(z=>`<button class="chip" type="button" data-z="${z.id}" aria-pressed="false">${esc(z.name)}</button>`).join("")}
-  </div>
- </div>
- <div id="ejes"></div>
-</div>`;
-
-function renderEjes(open){
- const q=($("#q")?.value||"").toLowerCase().trim(), z=document.querySelector(".chip[aria-pressed=true]")?.dataset.z||"";
- const out=EJES.map(e=>{
-  const ps=e.p.filter(p=>(!z||p.z.includes(z))&&(!q||(e.t+" "+e.s+" "+p.t+" "+p.w+" "+p.z.map(zName).join(" ")).toLowerCase().includes(q)));
-  if(!ps.length) return "";
-  const isOpen=open===e.id||q||z;
-  return `<details class="eje" id="eje-${e.id}" ${isOpen?"open":""}><summary><div><h3>${esc(e.t)}</h3><p>${esc(e.s)}</p></div><div class="count">${ps.length} ${ps.length>1?"medidas":"medida"}<span class="plus" aria-hidden="true">+</span></div></summary>
-  <ul>${ps.map(p=>`<li><div><strong>${esc(p.t)}</strong><span class="why">${esc(p.w)}</span><div class="z">${zTags(p.z)}</div></div><div>${stTag(p.st)}</div></li>`).join("")}</ul></details>`}).join("");
- $("#ejes").innerHTML=out||`<div class="empty">No hay propuestas con ese filtro. Prueba con otra palabra o <a href="#participa">envíanos la tuya</a>.</div>`;
+var DATA={
+axes:[
+['Servicios públicos','Limpieza, mantenimiento y servicios municipales.'],
+['Vivienda','Acceso a vivienda y condiciones para quedarse en Barbate.'],
+['Pesca','Sector pesquero, puerto y actividad económica vinculada al mar.'],
+['Turismo','Turismo y actividad económica compatible con el municipio.'],
+['Infraestructuras','Carreteras, equipamientos y conexiones.'],
+['Urbanismo','Planificación, suelo y mejora de espacios urbanos.'],
+['Empleo','Actividad económica y oportunidades laborales.'],
+['Seguridad','Seguridad ciudadana y coordinación institucional.'],
+['Medio ambiente','Litoral, espacios naturales y sostenibilidad.'],
+['Mayores','Servicios y equipamientos para personas mayores.'],
+['Juventud','Oportunidades, formación y vivienda para jóvenes.'],
+['Cultura y patrimonio','Patrimonio, cultura y actividad local.']
+],
+barrios:[
+['Barbate','Núcleo urbano, puerto y playa del Carmen'],
+['El Chinar','Barriada y necesidades de mantenimiento'],
+['Zahara de los Atunes','Entidad Local Autónoma y conexiones'],
+['Caños de Meca','Servicios, movilidad y entorno'],
+['San Ambrosio','Núcleo rural y servicios'],
+['La Oliva','Entorno rural y necesidades locales'],
+['Manzanete','Entorno rural y servicios'],
+['La Muela','Núcleo rural y movilidad']
+],
+facts:[
+['29/09/2026','Iniciativas sobre actuaciones pendientes','El PSOE de Barbate comunicó nuevas iniciativas parlamentarias sobre puerto, pesca, A-2231, vivienda, centro de salud, ITV y residencia de mayores.','https://www.psoedecadiz.es/el-psoe-de-barbate-anuncia-nuevas-iniciativas-parlamentarias-para-reclamar-a-la-junta-actuaciones-pendientes-en-el-municipio/','DECLARACIÓN'],
+['28/01/2026','Dragado del río Barbate','Andalucía Información informó de una moción aprobada por unanimidad en Diputación para reclamar a la Junta el dragado del río Barbate.','https://www.andaluciainformacion.es/articulo/barbate/diputacion-aprueba-unanimidad-mocion-psoe-exigir-junta-dragado-urgente-rio-barbate/202601281127483202670.html','PRENSA / DOCUMENTO'],
+['25/03/2026','Sector pesquero y tasas de lonja','Andalucía Información informó de una iniciativa del PSOE de Barbate relacionada con la exención de tasas de lonja durante la crisis del sector pesquero.','https://www.andaluciainformacion.es/articulo/barbate/psoe-barbate-pedira-exencion-tasas-lonja-crisis-sector-pesquero/202603251221173233676.html','DECLARACIÓN'],
+['04/06/2025','Secretaría general del PSOE de Barbate','La agrupación local comunicó la elección de Javier Rodríguez como secretario general.','','HECHO DOCUMENTADO'],
+['19/10/2023','Presidencia de la Mancomunidad de La Janda','Andalucía Información informó de la elección de Javier Rodríguez como presidente de la Mancomunidad.','https://www.andaluciainformacion.es/articulo/conil/javier-rodriguez-psoe-se-convierte-en-nuevo-presidente-de-la-mancomunidad-de-la-janda/202310192028092539803.html','PRENSA']
+],
+agenda:[
+['09','oct','19:00','Encuentro vecinal','El Chinar'],
+['17','oct','11:00','Recorrido y reunión vecinal','Zahara de los Atunes'],
+['24','oct','12:00','Encuentro sobre mayores','Barbate'],
+['07','nov','18:30','Asamblea abierta','Barbate']
+]
+};
+function esc(s){return String(s).replace(/[&<>"']/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]})}
+function source(u,label){return u?'<div class="source"><a href="'+u+'" target="_blank" rel="noopener">'+(label||'Fuente')+' ↗</a></div>':''}
+function fact(f){return '<article class="card"><span class="tag '+(f[4]=='DECLARACIÓN'?'decl':'verified')+'">'+f[4]+'</span><h3>'+esc(f[1])+'</h3><p>'+esc(f[2])+'</p>'+source(f[3])+'</article>'}
+function active(id){document.querySelectorAll('.nav a,.bottom a').forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+id)})}
+function render(){
+var id=(location.hash.slice(1)||'inicio').split('/')[0];active(id);
+var app=document.getElementById('app');
+if(id==='inicio')app.innerHTML='<section class="hero"><div class="heroGrid"><div class="heroCopy"><p class="eyebrow">Candidatura · Barbate 2027</p><h1>Javier Rodríguez</h1><p>Espacio público de información sobre candidatura, actividad municipal, propuestas, agenda y documentación.</p><div class="actions"><a class="btn white" href="#programa">Consultar programa</a><a class="btn outline" href="#fuentes">Ver fuentes</a></div></div><div class="heroImg"><img src="assets/javier.webp" alt="Javier Rodríguez"></div></div></section><div class="wrap"><section class="section"><span class="kicker">Arquitectura</span><h2 class="h2">Barbate 360º</h2><p class="sub">Cada propuesta debe poder relacionarse con diagnóstico, competencia, horizonte, indicador y fuente. Los hechos y declaraciones aparecen diferenciados.</p><div class="grid3"><div class="card"><span class="tag verified">VERIFICACIÓN</span><h3>Hechos documentados</h3><p>Actividad e iniciativas con fecha y fuente cuando está disponible.</p></div><div class="card"><span class="tag">PROPUESTAS</span><h3>Programa</h3><p>Áreas de trabajo preparadas para desarrollar y seguir.</p></div><div class="card"><span class="tag">TRANSPARENCIA</span><h3>Fuentes</h3><p>Acceso directo a las referencias utilizadas.</p></div></div></section><section class="section"><span class="kicker">Áreas</span><h2 class="h2">Barbate 360º</h2><div class="axes">'+DATA.axes.map(function(a){return '<article class="axis"><b>'+a[0]+'</b><p>'+a[1]+'</p></article>'}).join('')+'</div></section><section class="section"><span class="kicker">Actualidad documentada</span><h2 class="h2">Últimos asuntos</h2><div class="grid3">'+DATA.facts.slice(0,3).map(fact).join('')+'</div></section></div>';
+else if(id==='javier')app.innerHTML='<div class="wrap"><section class="section"><span class="kicker">Perfil público</span><h1 class="h2">Javier Rodríguez</h1><div class="profile"><div class="portrait"><img src="assets/javier.webp" alt="Javier Rodríguez"></div><div class="bio"><p>Espacio de información sobre la trayectoria pública y actividad institucional de Javier Rodríguez en Barbate.</p><div class="facts"><div class="fact"><b>2015–2021</b>Actividad en la corporación municipal de Barbate.</div><div class="fact"><b>2023</b>Candidatura a la Alcaldía y actividad como portavoz municipal.</div><div class="fact"><b>2023–2026</b>Actividad vinculada a la Mancomunidad de La Janda.</div><div class="fact"><b>2025</b>Elección como secretario general del PSOE de Barbate.</div><div class="fact"><b>2026</b>Proclamación pública como alcaldable para las municipales de 2027.</div></div>'+source('https://agrupacionespsoe.es/barbate/javier-rodriguez-candidato-psoe-de-barbeate/','Perfil público')+source('https://psoeandalucia.es/la-comision-de-etica-del-psoe-a-proclama-a-48-alcaldables-para-las-municipales-de-2027-e-informa-de-primarias-en-once-municipios/','Proclamación de alcaldables')+'</div></div></section><section class="section"><span class="kicker">Cronología</span><h2 class="h2">Trayectoria pública</h2><div class="timeline"><article class="event"><time>2015</time><h3>Concejal del Ayuntamiento de Barbate.</h3></article><article class="event"><time>2019</time><h3>Responsabilidades municipales documentadas.</h3></article><article class="event"><time>2023</time><h3>Candidato a la Alcaldía y portavoz del Grupo Municipal Socialista.</h3></article><article class="event"><time>2023</time><h3>Presidencia de la Mancomunidad de La Janda comunicada públicamente.</h3></article><article class="event"><time>2025</time><h3>Secretario general del PSOE de Barbate.</h3></article><article class="event"><time>2026</time><h3>Proclamación pública como alcaldable para 2027.</h3></article></div></section></div>';
+else if(id==='programa')app.innerHTML='<div class="wrap"><section class="section"><span class="kicker">Programa</span><h1 class="h2">Barbate 360º</h1><p class="sub">Áreas de trabajo. Esta pantalla no presenta como hechos las medidas que todavía son propuestas.</p><input class="search" id="q" placeholder="Buscar un área…" aria-label="Buscar un área"><div class="axes" id="axes">'+DATA.axes.map(function(a){return '<article class="axis"><b>'+a[0]+'</b><p>'+a[1]+'</p><span class="tag">ÁREA DE TRABAJO</span></article>'}).join('')+'</div></section></div>';
+else if(id==='barrios')app.innerHTML='<div class="wrap"><section class="section"><span class="kicker">Territorio</span><h1 class="h2">Barrios y núcleos</h1><p class="sub">Cada zona tendrá problemas documentados, actuaciones, propuestas, competencia y seguimiento.</p><div class="barrios">'+DATA.barrios.map(function(b,i){return '<button class="barrio '+(i===0?'active':'')+'" data-b="'+i+'"><b>'+b[0]+'</b><span>'+b[1]+'</span></button>'}).join('')+'</div><div class="card" id="bPanel" style="margin-top:15px"><h3>'+DATA.barrios[0][0]+'</h3><p>'+DATA.barrios[0][1]+'</p><p class="source">Ficha territorial en construcción: se incorporarán incidencias y actuaciones con fuente identificable.</p></div></section></div>';
+else if(id==='hechos')app.innerHTML='<div class="wrap"><section class="section"><span class="kicker">Investigación → verificación</span><h1 class="h2">Hechos documentados</h1><p class="sub">Cada entrada identifica fecha, naturaleza y fuente cuando está disponible. Una declaración política no se presenta como hecho independiente.</p><div class="timeline">'+DATA.facts.map(function(f){return '<article class="event"><time>'+f[0]+'</time><h3>'+esc(f[1])+'</h3><p>'+esc(f[2])+'</p><span class="tag '+(f[4]=='DECLARACIÓN'?'decl':'verified')+'">'+f[4]+'</span>'+source(f[3])+'</article>'}).join('')+'</div></section></div>';
+else if(id==='agenda')app.innerHTML='<div class="wrap"><section class="section"><span class="kicker">Agenda</span><h1 class="h2">Actividad pública</h1><p class="sub">Las fechas mostradas deben confirmarse antes de considerarlas definitivas.</p><div class="agenda">'+DATA.agenda.map(function(e){return '<article class="card agendaItem"><div class="date"><b>'+e[0]+'</b><span>'+e[1]+'</span></div><div><h3>'+e[3]+'</h3><p>'+e[2]+' · '+e[4]+'</p><span class="tag decl">PENDIENTE DE CONFIRMACIÓN</span></div></article>'}).join('')+'</div></section></div>';
+else if(id==='fuentes')app.innerHTML='<div class="wrap"><section class="section"><span class="kicker">Trazabilidad</span><h1 class="h2">Fuentes y referencias</h1><p class="sub">Fuente primaria primero; después, contraste con fuentes secundarias. Cada afirmación debe conservar fecha y naturaleza.</p><div class="sources">'+[['Ayuntamiento de Barbate','Corporación municipal y documentación institucional.','https://www.barbate.es/el-ayuntamiento/corporacion-municipal'],['PSOE Andalucía','Proclamación de alcaldables municipales 2027.','https://psoeandalucia.es/la-comision-de-etica-del-psoe-a-proclama-a-48-alcaldables-para-las-municipales-de-2027-e-informa-de-primarias-en-once-municipios/'],['PSOE de Barbate','Perfil público de Javier Rodríguez.','https://agrupacionespsoe.es/barbate/javier-rodriguez-candidato-psoe-de-barbate/'],['PSOE Cádiz','Iniciativas parlamentarias comunicadas en septiembre de 2026.','https://www.psoedecadiz.es/el-psoe-de-barbate-anuncia-nuevas-iniciativas-parlamentarias-para-reclamar-a-la-junta-actuaciones-pendientes-en-el-municipio/'],['Andalucía Información','Información sobre el dragado del río Barbate.','https://www.andaluciainformacion.es/articulo/barbate/diputacion-aprueba-unanimidad-mocion-psoe-exigir-junta-dragado-urgente-rio-barbate/202601281127483202670.html'],['Andalucía Información','Información sobre tasas de lonja.','https://www.andaluciainformacion.es/articulo/barbate/psoe-barbate-pedira-exencion-tasas-lonja-crisis-sector-pesquero/202603251221173233676.html']].map(function(s){return '<article class="card sourceBox"><h3>'+s[0]+'</h3><p>'+s[1]+'</p><a href="'+s[2]+'" target="_blank" rel="noopener">Abrir fuente ↗</a></article>'}).join('')+'</div></section><section class="section"><span class="kicker">Estado editorial</span><h2 class="h2">Cómo se publica</h2><div class="grid3"><div class="card"><span class="tag">01 · NUEVA</span><h3>Información detectada</h3><p>Se registra sin presentarla todavía como verificada.</p></div><div class="card"><span class="tag">02 · VERIFICADA</span><h3>Fuentes comprobadas</h3><p>Se revisan fechas, cifras, competencia y contexto.</p></div><div class="card"><span class="tag verified">03 · PUBLICABLE</span><h3>Trazabilidad disponible</h3><p>El contenido puede aparecer en la parte pública.</p></div></div></section></div>';
+else location.hash='#inicio';
+if(id==='programa'){document.getElementById('q').oninput=function(){var q=this.value.toLowerCase();document.querySelectorAll('#axes .axis').forEach(function(x){x.style.display=x.textContent.toLowerCase().indexOf(q)>=0?'block':'none'})}}
+if(id==='barrios'){document.querySelectorAll('.barrio').forEach(function(b){b.onclick=function(){document.querySelectorAll('.barrio').forEach(function(x){x.classList.remove('active')});b.classList.add('active');var d=DATA.barrios[+b.dataset.b];document.getElementById('bPanel').innerHTML='<h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p><p class="source">Ficha territorial en construcción: se incorporarán incidencias y actuaciones con fuente identificable.</p>'}})}
+window.scrollTo(0,0);
 }
-
-V.barrios=()=>`
-<div class="wrap">
- <div class="pageHead"><h1 class="h2 display">Tu barrio</h1><p class="sub">Elige tu zona y mira qué proponemos y qué hemos pedido ya para ella.</p></div>
- <div class="zones" role="group" aria-label="Zonas">${ZONES.map((z,i)=>`<button class="zone" type="button" data-zone="${z.id}" aria-pressed="${i===0}"><b>${esc(z.name)}</b><span>${esc(z.desc)}</span></button>`).join("")}</div>
- <div id="zonePanel"></div>
-</div>`;
-function renderZone(id){
- const props=[];EJES.forEach(e=>e.p.forEach(p=>{if(p.z.includes(id)&&p.z.length<ALL.length)props.push({...p,e:e.t})}));
- const gen=[];EJES.forEach(e=>e.p.forEach(p=>{if(p.z.length===ALL.length)gen.push(p)}));
- const hechos=HECHO.filter(h=>h.z.includes(id)&&h.z.length<ALL.length);
- $("#zonePanel").innerHTML=`<div class="zonePanel">
-  <div><h3>Propuestas para ${esc(zName(id))}</h3><div class="list">${props.length?props.map(p=>`<article class="item"><h3>${esc(p.t)}</h3><p>${esc(p.w)}</p><div style="margin-top:8px">${stTag(p.st)}</div></article>`).join(""):'<div class="empty">Aquí irán las medidas específicas de esta zona. <a href="#participa">Cuéntanos qué necesita</a>.</div>'}
-   <article class="item"><h3>Y en todo el municipio</h3><p>${gen.slice(0,6).map(p=>esc(p.t)).join(", ")}.</p><a class="more" href="#propuestas">Ver todas</a></article></div></div>
-  <div><h3>Lo que ya hemos pedido</h3><div class="list">${hechos.length?hechos.map(h=>`<article class="item"><time datetime="${h.d}">${fDate(h.d)}</time><h3>${esc(h.t)}</h3><p>${esc(h.x)}</p></article>`).join(""):'<div class="empty">Todavía no hay iniciativas específicas registradas aquí.</div>'}</div></div>
- </div>`;
-}
-
-V.hecho=()=>{
- const byY={};HECHO.forEach(h=>(byY[h.d.slice(0,4)]=byY[h.d.slice(0,4)]||[]).push(h));
- return `<div class="wrap"><div class="pageHead"><h1 class="h2 display">Hecho</h1><p class="sub">Lo que hemos llevado al Pleno, a la Diputación y a la calle. Con fecha y fuente.</p></div>
- ${Object.keys(byY).sort().reverse().map(y=>`<div class="year">${y}</div><div class="tl">${byY[y].map(h=>`<article><time datetime="${h.d}" class="tag">${fDate(h.d)}</time><h3>${esc(h.t)}</h3><p>${esc(h.x)}</p>${h.u?`<a class="src" href="${h.u}" target="_blank" rel="noopener">Ver noticia</a>`:""}</article>`).join("")}</div>`).join("")}</div>`};
-
-V.javier=()=>`
-<div class="wrap">
- <div class="pageHead"><h1 class="h2 display">Javier Rodríguez</h1></div>
- <div class="profile">
-  <div class="ph"><img src="${IMG}" alt="Retrato de Javier Rodríguez" width="1200" height="800" loading="lazy"></div>
-  <div class="bio">
-   <p>Nací en Barbate en 1990. Soy graduado en Derecho y técnico en Administración y Finanzas, y he trabajado como técnico de programas y proyectos públicos.</p>
-   <p>Conozco el Ayuntamiento por dentro: entre 2015 y 2021 fui concejal y primer teniente de alcalde, con Presidencia, Seguridad Ciudadana, Turismo y Deportes. Hoy soy portavoz socialista, secretario general del PSOE de Barbate y presido la Mancomunidad de La Janda.</p>
-   <p>Creo en una política tranquila, que dialoga con todas las administraciones y que se mide por lo que resuelve en la calle.</p>
-   <div class="hero-actions" style="margin-top:18px"><a class="btn btn-red" href="#propuestas">Mis propuestas</a><button class="btn btn-quiet" type="button" data-share="Javier Rodríguez · Barbate 2027" data-hash="#javier">Compartir</button></div>
-  </div>
- </div>
- <section class="block"><h2 class="h2 display">Trayectoria</h2>
-  <div class="tl" style="margin-top:18px">${TRAY.map(([y,t])=>`<article><span class="tag">${y}</span><p style="margin-top:6px;color:var(--text)">${esc(t)}</p></article>`).join("")}</div></section>
- <section class="block"><h2 class="h2 display">Equipo</h2><p class="sub">Parte del equipo actual. La lista para 2027 se presentará más adelante.</p>
-  <div class="team">${TEAM.map(([i,n,r])=>`<div class="person"><div class="av" aria-hidden="true">${i}</div><b>${esc(n)}</b><span>${esc(r)}</span></div>`).join("")}</div></section>
-</div>`;
-
-function evHTML(e){const [y,m,d]=e.d.split("-");return `<article class="ev"><div class="date"><b>${+d}</b><span>${MES[+m-1]}</span></div><div><h3>${esc(e.t)}</h3><p>${esc(e.h)} h, ${esc(e.l)}</p></div><button class="btn btn-quiet shareBtn" type="button" data-share="${esc(e.t)}" data-hash="#agenda">Compartir</button></article>`}
-V.agenda=()=>`<div class="wrap"><div class="pageHead"><h1 class="h2 display">Agenda</h1><p class="sub">Encuentros abiertos en los barrios y las pedanías. <span class="tag ej">Fechas de ejemplo</span></p></div>${AGENDA.map(evHTML).join("")}</div>`;
-
-V.participa=()=>`
-<div class="wrap">
- <div class="pageHead"><h1 class="h2 display">Participa</h1><p class="sub">El programa se escribe con los vecinos. Mándanos tu idea, tu queja o tu propuesta.</p></div>
- <div class="pgrid">
-  <form class="form" id="ideaForm" novalidate>
-   <h2 class="display">Enviar una idea</h2>
-   <p class="fine">Solo te pedimos lo necesario. El contacto es opcional.</p>
-   <div class="row2">
-    <div><label for="fTema">Tema</label><select id="fTema" required>${EJES.map(e=>`<option>${esc(e.t)}</option>`).join("")}<option>Otro</option></select></div>
-    <div><label for="fZona">Zona</label><select id="fZona"><option value="">Todo el municipio</option>${ZONES.map(z=>`<option>${esc(z.name)}</option>`).join("")}</select></div>
-   </div>
-   <label for="fTxt">Tu propuesta</label>
-   <textarea id="fTxt" required maxlength="1200" placeholder="Ejemplo: en mi calle faltan papeleras y la acera está levantada desde hace meses."></textarea>
-   <div class="row2">
-    <div><label for="fNom">Nombre (opcional)</label><input id="fNom" type="text" autocomplete="given-name"></div>
-    <div><label for="fMail">Email (opcional)</label><input id="fMail" type="email" autocomplete="email"></div>
-   </div>
-   <label class="check"><input type="checkbox" id="fOk" required> <span>He leído la información sobre privacidad y acepto que la candidatura use mis datos solo para responder a esta propuesta.</span></label>
-   <div style="margin-top:18px"><button class="btn btn-red" type="submit">Enviar idea</button></div>
-   <div id="formMsg" aria-live="polite"></div>
-  </form>
-  <div class="side">
-   <article class="item"><h3>Únete como voluntario</h3><p>Reparto, redes, encuentros en tu barrio. Tú eliges cuánto tiempo.</p><a class="more" href="#participa" data-vol>Quiero ayudar</a></article>
-   <article class="item"><h3>Canal de WhatsApp</h3><p>Novedades de la campaña, sin grupos ni ruido.</p><a class="more" href="#participa" data-soon>Unirme al canal</a></article>
-   <article class="item"><h3>Privacidad</h3><p class="fine">Responsable: pendiente de confirmar por la candidatura. Finalidad: gestionar tu propuesta. No se ceden datos a terceros. Puedes pedir su borrado en cualquier momento.</p></article>
-  </div>
- </div>
-</div>`;
-
-/* Router */
-const ROUTES=["inicio","propuestas","barrios","hecho","javier","agenda","participa"];
-function route(){
- const [r,arg]=(location.hash.slice(1)||"inicio").split("/");
- const page=ROUTES.includes(r)?r:"inicio";
- $("#app").innerHTML=V[page](arg);
- document.querySelectorAll(".nav a,.tabbar a").forEach(a=>a.getAttribute("href")==="#"+page?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current"));
- document.title=(page==="inicio"?"":page[0].toUpperCase()+page.slice(1)+" · ")+"Javier Rodríguez · Barbate 2027";
- if(page==="propuestas"){renderEjes(arg);$("#q").addEventListener("input",()=>renderEjes());document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed","false"));c.setAttribute("aria-pressed","true");renderEjes()});if(arg){const el=document.getElementById("eje-"+arg);if(el){el.scrollIntoView();return}}}
- if(page==="barrios"){renderZone(ZONES[0].id);document.querySelectorAll(".zone").forEach(b=>b.onclick=()=>{document.querySelectorAll(".zone").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");renderZone(b.dataset.zone)})}
- if(page==="inicio"){$("#sloganBtn").onclick=()=>{let i=((+store.get("slogan")||0)+1)%SLOGANS.length;store.set("slogan",i);const h=$("#sloganText");h.style.opacity=0;setTimeout(()=>{h.textContent=SLOGANS[i];h.style.opacity=1},200);$("#sloganIdx").textContent=`Lema ${i+1} de ${SLOGANS.length}`}}
- if(page==="participa"){const f=$("#ideaForm");const draft=store.get("ideaDraft");if(draft)$("#fTxt").value=draft;$("#fTxt").addEventListener("input",e=>store.set("ideaDraft",e.target.value));
-  f.onsubmit=e=>{e.preventDefault();const msg=$("#formMsg");if(!$("#fTxt").value.trim()){msg.innerHTML='<p class="fine" style="color:var(--rojo)">Escribe tu propuesta antes de enviarla.</p>';$("#fTxt").focus();return}if(!$("#fOk").checked){msg.innerHTML='<p class="fine" style="color:var(--rojo)">Marca la casilla de privacidad para poder enviarla.</p>';return}
-   msg.innerHTML='<div class="ok"><b>Idea recibida.</b> Gracias. En esta versión de prueba no se envía a ningún servidor.</div>';f.reset();store.set("ideaDraft","")};
-  document.querySelector("[data-vol]").onclick=e=>{e.preventDefault();toast("Formulario de voluntariado: próximamente")};
-  document.querySelector("[data-soon]").onclick=e=>{e.preventDefault();toast("El enlace al canal se añadirá cuando exista")}}
- document.querySelectorAll("[data-share]").forEach(b=>b.onclick=()=>share(b.dataset.share,b.dataset.hash));
- window.scrollTo(0,0);
-}
-addEventListener("hashchange",route);
-
-/* Theme + draft bar */
-const root=document.documentElement;const th=store.get("theme");if(th)root.dataset.theme=th;
-$("#themeBtn").onclick=()=>{const dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;root.dataset.theme=dark?"light":"dark";store.set("theme",root.dataset.theme)};
-if(store.get("draftClosed"))$("#draft").remove();else $("#draftClose").onclick=()=>{store.set("draftClosed","1");$("#draft").remove()};
-
-route();
-if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+addEventListener('hashchange',render);render();
+if(localStorage.getItem('noticeClosed'))document.querySelector('.notice').remove();document.getElementById('closeNotice').onclick=function(){localStorage.setItem('noticeClosed','1');document.querySelector('.notice').remove()};
+document.getElementById('theme').onclick=function(){document.body.classList.toggle('dark')};
 </script>
 </body>
 </html>
