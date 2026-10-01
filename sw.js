@@ -1,6 +1,6 @@
 // Caché de la PWA Javier Rodríguez · Barbate 2027
-const VERSION = 'barbate-2027-v3';
-const CORE = ['./','./index.html','./manifest.webmanifest','./assets/javier.webp','./icons/icon-192.png'];
+const VERSION = 'barbate-2027-v4';
+const CORE = ['./','./index.html','./manifest.webmanifest','./assets/javier.webp','./assets/og.jpg','./icons/icon-192.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
