@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ttttooonni.github.io/javier/sitemap.xml
